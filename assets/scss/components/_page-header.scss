@@ -1,0 +1,129 @@
+/*==========================
+17. Page Header Style CSS
+============================*/
+.page-header {
+  &-area {
+    background: #ddd url('../img/extra/page-title-bg.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding: 90px 0;
+
+    @media #{$sm-device} {
+      padding: 45px 0 50px;
+    }
+
+    &:before {
+      @include overlay(#402000, 0.5)
+    }
+  }
+
+  &-title {
+    @media #{$sm-device} {
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      color: $white;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 1;
+      margin-bottom: 0;
+
+      @media #{$xs-device} {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &-breadcrumb {
+  }
+}
+
+// Breadcrumb Style
+.breadcrumb {
+  background-color: $white;
+  border-radius: 0;
+  display: inline-flex;
+  margin: 0;
+  padding: 10px 15px;
+
+  @media #{$sm-device} {
+    padding: 5px 10px;
+  }
+
+  li {
+    position: relative;
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: '\f105';
+      font-family: $font-font_awesome;
+      vertical-align: middle;
+      margin: 0 10px;
+    }
+
+    a {
+      color: $brand-color;
+      display: inline-block;
+      font-weight: 600;
+
+      @media #{$xs-device} {
+        font-size: 13px;
+      }
+
+      &:hover {
+        color: $blackSoft;
+      }
+    }
+
+    &.active {
+      a {
+        color: $paragraph;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+// Pagination Style
+.pagination{
+  flex-wrap: wrap;
+
+  li{
+    a{
+      border: 1px solid $border-color;
+      color: $paragraph;
+      display: block;
+      font-weight: 600;
+      font-size: 18px;
+      text-align: center;
+      margin-right: 10px;
+      line-height: 45px;
+      height: 45px;
+      width: 45px;
+
+      @media #{$xs-device} {
+        line-height: 40px;
+        height: 40px;
+        width: 40px;
+      }
+
+      &:hover, &.current{
+        background-color: $brand-color;
+        border-color: $brand-color;
+        color: $white;
+      }
+    }
+
+    &:last-child{
+      a{
+        margin-right: 0;
+      }
+    }
+  }
+}

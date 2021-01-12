@@ -1,0 +1,178 @@
+/*=============================
+21. Blog Details Style CSS
+==============================*/
+.blog{
+  // Blog Info
+  &-info{
+    margin-top: 40px;
+    h2{
+      font-size: 28px;
+      line-height: 1.2;
+      font-weight: 600;
+      margin-top: -7px;
+      margin-bottom: 20px;
+
+      @media #{$sm-device} {
+        font-size: 24px;
+      }
+    }
+  }
+
+  // Blog Meta
+  &-meta{
+    margin-bottom: 20px;
+    a {
+      font-weight: 700;
+      margin-right: 15px;
+      color: $paragraph;
+
+      @media #{$xs-device} {
+        margin-right: 10px;
+        font-size: 14px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover{
+        color: $brand-color;
+      }
+    }
+  }
+
+  //Blog Share
+  &-share{
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+
+    h4{
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 0;
+      line-height: 1;
+      vertical-align: middle;
+
+      i{
+        color: #fa9a00;
+        margin-right: 5px;
+        vertical-align: middle;
+        margin-top: -2px;
+      }
+    }
+
+    a{
+      color: $paragraph;
+      line-height: 1;
+      margin-left: 15px;
+      margin-top: 2px;
+
+      &:hover{
+        color: $brand-color;
+      }
+    }
+  }
+}
+
+
+// Blockquote
+blockquote, .blockquote {
+  background-color: $offWhite;
+  color: $blackSoft;
+  font-weight: 600;
+  font-family: $font-family-base;
+  padding: 60px 35px 35px;
+  margin-bottom: 15px;
+  position: relative;
+
+  &:after {
+    content: "\f10e";
+    color: #dddddd;
+    font-family: $font-font_awesome;
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+  }
+
+  &:before {
+    background-color: $brand-color;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+  }
+
+  .blockquote-footer {
+    color: $paragraph;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+/*============================
+Start Comment Area Wrapper
+============================*/
+.comment-area-wrapper {
+  margin-top: 40px;
+
+  h3 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+}
+
+.single-comment-wrap {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.comment-reply {
+    margin-left: 50px;
+
+    @media #{$sm-device} {
+      margin-left: 20px;
+    }
+  }
+
+  .author-thumb {
+    border-radius: 3px;
+    margin-right: 15px;
+    height: 70px;
+    max-width: 70px;
+    flex-basis: 70px;
+    overflow: hidden;
+  }
+
+  .comments-info {
+    margin-top: -4px;
+    flex-basis: calc(100% - 70px);
+  }
+
+  .comment-footer {
+    a {
+      font-size: 14px;
+      color: $paragraph;
+
+      strong {
+        color: $blackSoft;
+      }
+
+      &.btn-reply {
+        color: $blackSoft;
+        &:hover {
+          color: $brand-color;
+        }
+      }
+    }
+  }
+}

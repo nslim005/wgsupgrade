@@ -1,0 +1,19 @@
+/*=========================
+15. Banner Style CSS
+==========================*/
+
+.banner-text{
+  @media #{$sm-device} {
+    margin-top: 25px;
+  }
+
+  h2{
+    @media #{$sm-device} {
+      font-size: 20px;
+    }
+
+    @media #{$md-device} {
+      font-size: 24px;
+    }
+  }
+}

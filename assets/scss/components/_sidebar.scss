@@ -1,0 +1,267 @@
+/*=========================
+20. Sidebar Style CSS
+===========================*/
+
+// Sidebar Item Style
+.sidebar {
+  &-item {
+    overflow: hidden;
+    margin-bottom: 38px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 26px;
+    display: inline-block;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    position: relative;
+
+    &:before {
+      background-color: #ddd;
+      content: '';
+      position: absolute;
+      top: 21px;
+      left: calc(100% + 10px);
+      height: 1px;
+      width: 200px;
+    }
+
+    &:after {
+      background-color: $brand-color;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 80px;
+    }
+  }
+
+  &-list {
+    margin-top: -2px;
+
+    li {
+      border-bottom: 1px solid $border-color;
+      line-height: 1;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: $blackSoft;
+        font-weight: 600;
+
+        &:hover {
+          color: $brand-color;
+        }
+      }
+    }
+  }
+}
+
+// Recent News Style
+.recent-news {
+  &-item {
+    display: flex;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__thumb {
+      flex-basis: 70px;
+      max-width: 70px;
+      margin-right: 10px;
+      height: 70px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &__info {
+      flex-basis: calc(100% - 80px);
+      max-width: calc(100% - 80px);
+
+      h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-top: -3px;
+
+        a {
+          color: $headingColor;
+
+          &:hover {
+            color: $brand-color;
+          }
+        }
+      }
+
+      .post-date {
+        font-size: 15px;
+        margin-top: 5px;
+        display: block;
+
+        i {
+          font-size: 13px;
+          vertical-align: middle;
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+}
+
+// Tags Style CSS
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -2.5px;
+
+  li {
+    margin: 2.5px;
+    a {
+      border: 1px solid $border-color;
+      color: $paragraph;
+      display: block;
+      padding: 8px 20px;
+
+      &:hover {
+        color: $brand-color;
+        border-color: $brand-color;
+      }
+    }
+  }
+}
+
+// Search box
+.src-from-content {
+  input {
+    background-color: $offWhite;
+    border: 1px solid $offWhite;
+    display: block;
+    padding: 15px 10px;
+    outline: none;
+    max-width: calc(100% - 60px);
+    flex-basis: calc(100% - 60px);
+  }
+
+  .btn-search {
+    background-color: $brand-color;
+    color: $white;
+    max-width: 60px;
+    flex-basis: 60px;
+  }
+}
+
+// Price Range Slider
+.price-range-wrap {
+  padding-top: 10px;
+
+  .price-range {
+    &.ui-widget-content {
+      background-color: #eeeeee;
+      border: none;
+      border-radius: 0;
+      margin-right: 12px;
+      margin-left: 8px;
+      height: 5px;
+
+      .ui-slider-range {
+        background-color: $brand-color;
+        border-radius: 0;
+      }
+
+      .ui-slider-handle {
+        background-color: $brand-color;
+        border: 5px solid #dddddd;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        outline: none;
+        top: -7px;
+        cursor: ew-resize;
+        margin-left: -.5em;
+      }
+    }
+  }
+
+  .range-slider {
+    line-height: 1;
+    margin-top: 22px;
+    * {
+      margin: 0;
+      line-height: 1;
+    }
+    input#amount {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      line-height: 1;
+      pointer-events: none;
+      margin-left: 10px;
+    }
+
+    .range-inner {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+// Recent View Product Widget
+.single-recent-view-prod {
+  justify-content: space-between;
+
+  &:nth-child(1n + 2) {
+    margin-top: 10px;
+  }
+
+  .prod-info{
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      margin-top: -3px;
+
+      a {
+        color: $blackSoft;
+
+        &:hover {
+          color: $brand-color;
+        }
+      }
+    }
+
+    .rating {
+      line-height: 1;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .price-group {
+      font-weight: 700;
+      font-size: 15px;
+
+      .price-old {
+        opacity: 0.8;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .prod-thumb {
+    max-width: 80px;
+    flex-basis: 80px;
+  }
+}

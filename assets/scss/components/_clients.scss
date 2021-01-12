@@ -1,0 +1,25 @@
+/*============================
+12. Our Clients Style CSS
+=============================*/
+.our-client-wrapper{
+  background-color: $offWhite;
+  padding: 90px 0;
+
+  @media #{$sm-device} {
+    padding: 60px 0;
+  }
+}
+
+
+// Single client Item Style
+.client-item{
+  background-color: $white;
+  border: 1px solid $border-color;
+  padding: 10px;
+  text-align: center;
+
+  img{
+    max-width: 90%;
+    margin: auto;
+  }
+}

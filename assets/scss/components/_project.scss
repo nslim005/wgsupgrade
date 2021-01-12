@@ -1,0 +1,316 @@
+/*===============================
+07. Latest Project Style CSS
+=================================*/
+.latest-project-header {
+  background-color: $offWhite;
+  padding-top: 80px;
+  padding-bottom: 40px;
+
+  @media #{$sm-device} {
+    padding-top: 52px;
+    padding-bottom: 30px;
+  }
+
+  .section-title-wrap {
+    h2 {
+      background-color: $offWhite;
+    }
+  }
+}
+
+// Project Column
+.project-content__inner {
+  display: flex;
+  flex-wrap: wrap;
+
+  .project-item {
+    max-width: 20%;
+    flex-basis: 20%;
+    width: 100%;
+
+    @media #{$xlmax-device, $lg-device} {
+      max-width: 33.333%;
+      flex-basis: 33.333%;
+    }
+
+    @media #{$md-device, $sm-device} {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+
+    @media #{$xs-device} {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+}
+
+// Project Masonry
+.project-masonry{
+  margin-top: -10px;
+  .project-item{
+    margin-top: 10px;
+
+    &__info{
+      .info-wrap{
+        width: calc(100% - 50px);
+      }
+    }
+  }
+}
+
+// Filter Menu Style
+.project-filter-menu {
+  li {
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    margin-right: 20px;
+    padding: 5px 8px;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:after, &:before {
+      content: '';
+      background-color: $brand-color;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: 0.4s;
+    }
+
+    &:after {
+      height: 0;
+      width: 2px;
+    }
+
+    &:before {
+      height: 2px;
+      width: 0;
+    }
+
+    &:hover, &.active {
+      &:after {
+        height: 10px;
+      }
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  &.project-page{
+    padding: 0 10px;
+  }
+}
+
+// Single Project Item
+.project-item {
+  position: relative;
+
+  &__info {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+
+    &:before {
+      @include overlay();
+    }
+
+    a {
+      color: $white;
+      position: relative;
+
+      &.cate-name {
+        line-height: 1;
+
+        &:before {
+          background-color: $white;
+          content: '';
+          position: absolute;
+          left: calc(100% + 20px);
+          top: 12px;
+          height: 1px;
+          width: 300px;
+        }
+      }
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-top: 20px;
+    }
+
+    .btn-read-more {
+      &:hover {
+        color: $brand-color;
+      }
+    }
+
+    .info-wrap {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      width: calc(100% - 80px);
+    }
+  }
+
+  &__thumb {
+    position: relative;
+    img {
+      width: 100%;
+    }
+  }
+
+  // Project Style 2
+  &--2 {
+    margin-top: 30px;
+    
+    .project-item{
+      &__thumb{
+        &:before{
+          @include overlay();
+          transition: 0.4s;
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        .project-hvr{
+          .btn-popup-img{
+            background-color: $brand-color;
+            border-radius: 50%;
+            color: $white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.4);
+            transition: 0.4s;
+            opacity: 0;
+            visibility: hidden;
+            text-align: center;
+            line-height: 45px;
+            height: 45px;
+            width: 45px;
+
+            &:hover{
+              background-color: $white;
+              color: $brand-color;
+            }
+          }
+        }
+      }
+
+      &__info{
+        position: static;
+        overflow: hidden;
+        margin-top: 22px;
+
+        &:before{
+          display: none;
+        }
+
+        a{
+          color: $headingColor;
+
+          &:hover{
+            color: $brand-color;
+          }
+
+          &.cate-name{
+            font-size: 18px;
+            &:before{
+              background-color: #ddd;
+            }
+          }
+        }
+
+        h3{
+          font-size: 20px;
+          font-weight: 400;
+          margin: 5px 0 0;
+        }
+      }
+    }
+
+    &:hover{
+      .project-item{
+        &__thumb{
+          &:before{
+            opacity: 1;
+            visibility: visible;
+          }
+
+          .project-hvr{
+            .btn-popup-img{
+              opacity: 1;
+              visibility: visible;
+              transform: translate(-50%, -50%) scale(1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Home 2 Our Project Style
+.our-project-wrapper {
+  padding: 82px 0 90px;
+
+  @media #{$sm-device} {
+    padding: 52px 0 60px;
+  }
+}
+
+
+// Feature Products Style CSS
+.featured-project-area {
+  margin-top: 50px;
+
+  @media #{$sm-device, $md-device} {
+    margin-top: 40px;
+  }
+
+  h2 {
+    font-weight: 600;
+    margin-bottom: 0;
+    font-size: 26px;
+  }
+
+  .project-item {
+    display: flex;
+
+    &__thumb {
+      max-width: 120px;
+      flex-basis: 120px;
+      margin-right: 15px;
+
+      .project-hvr{
+        .btn-popup-img{
+          font-size: 13px;
+          line-height: 35px;
+          height: 35px;
+          width: 35px;
+        }
+      }
+    }
+
+    &__info {
+      margin-top: 0;
+      max-width: calc(100% - 135px);
+      flex-basis: calc(100% - 135px);
+
+      h3 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

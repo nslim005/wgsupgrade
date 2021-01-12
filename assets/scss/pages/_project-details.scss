@@ -1,0 +1,105 @@
+/*=============================
+18. Project Details Style CSS
+===============================*/
+.project {
+  &-info {
+    h2 {
+      font-size: 28px;
+      margin-top: -10px;
+
+      @media #{$sm-device} {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &-desc {
+    margin-top: 35px;
+
+    .section-title-wrap {
+      margin-bottom: 10px;
+    }
+
+    &-list {
+      li {
+        font-size: 18px;
+        border-bottom: 1px solid $border-color;
+        padding: 10px 0;
+        strong {
+          color: $blackSoft;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .view-project {
+      background-color: $offWhite;
+      border: 1px solid $border-color;
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 15px 20px;
+      margin-top: 40px;
+
+      &:hover {
+        background-color: $brand-color;
+        border-color: $brand-color;
+        color: $white;
+      }
+    }
+  }
+
+  &-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      a {
+        color: $blackSoft;
+        font-weight: 700;
+
+        @media #{$xs-device} {
+          font-size: 13px;
+        }
+
+        &:hover {
+          color: $brand-color;
+        }
+      }
+    }
+
+    &-wrap {
+      margin-top: 60px;
+
+      @media #{$sm-device} {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &-details-thumb {
+    .project-thumb-item {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .slick-dots{
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      li{
+        background-color: $white;
+
+        &:hover, &.slick-active{
+          background-color: $brand-color;
+        }
+      }
+    }
+  }
+}

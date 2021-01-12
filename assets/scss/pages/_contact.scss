@@ -1,0 +1,16 @@
+/*=========================
+22. Contact Style CSS
+===========================*/
+
+// Contact Page Map Style
+.contact-map{
+  height: 100%;
+
+  @media #{$md-device} {
+    height: 500px;
+  }
+
+  @media #{$sm-device} {
+    height: 300px;
+  }
+}

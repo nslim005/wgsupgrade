@@ -1,0 +1,44 @@
+/*===========================
+11. Why Choose Us Style CSS
+=============================*/
+
+// Accordion Style
+.accordion{
+  .card{
+    border-color: $border-color;
+    border-radius: 0;
+    border-bottom: 0;
+    margin: 10px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    &-header{
+      border: 0;
+      background-color: transparent;
+      padding: 0;
+      h2{
+        background-color: $white;
+        border-bottom: 1px solid $border-color;
+        color: lighten($black, 20%);
+        cursor: pointer;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 0;
+        padding: 15px 20px;
+
+        &[aria-expanded*="true"]{
+          background-color: $brand-color;
+          color: $white;
+          border-bottom-color: $brand-color;
+        }
+      }
+    }
+
+    &-body{
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}

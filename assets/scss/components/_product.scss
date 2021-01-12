@@ -1,0 +1,119 @@
+/*==========================
+23. Product Style CSS
+===========================*/
+.single-product-wrap {
+  margin-top: 30px;
+
+  .product-thumb {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      transition: 0.4s;
+    }
+
+    .btn-quick-view {
+      background-color: $black;
+      border-radius: 50%;
+      color: $white;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: 0.4s;
+      transform: scale(1.5);
+      margin: -25px 0 0 -25px;
+      opacity: 0;
+      visibility: hidden;
+      line-height: 50px;
+      height: 50px;
+      width: 50px;
+
+      &:hover {
+        background-color: $brand-color;
+      }
+    }
+
+    .btn-add-cart {
+      background-color: $brand-color;
+      color: $white;
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: center;
+      transform: translateY(100%);
+      padding: 10px;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+
+      &:hover {
+        background-color: $blackSoft;
+      }
+    }
+  }
+
+  .product-details {
+    margin-top: 15px;
+
+    .product-title {
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: capitalize;
+
+      a {
+        color: $blackSoft;
+
+        &:hover {
+          color: $brand-color;
+        }
+      }
+    }
+
+    .price-group {
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 600;
+
+      .old-price {
+        color: $paragraph;
+        margin-right: 5px;
+        font-size: 16px;
+      }
+
+      .price{
+        color: $red;
+      }
+    }
+
+    .btn-add-wishlist {
+      color: $blackSoft;
+      padding-right: 2px;
+    }
+  }
+
+  // After Hover Effect
+  &:hover {
+    .btn-quick-view {
+      transform: scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+    .btn-add-cart {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.slick-slider{
+  .single-product-wrap{
+    margin-top: 0;
+  }
+}

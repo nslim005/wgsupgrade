@@ -1,0 +1,47 @@
+/*===========================
+16. Counter Up Style CSS
+=============================*/
+
+.counter-item {
+  margin-right: 50px;
+
+  @media #{$xs-device} {
+    margin-right: 30px;
+    text-align: center;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__icon {
+    color: $brand-color;
+    font-size: 40px;
+    line-height: 1;
+  }
+
+  &__info {
+    .counter {
+      &-no {
+        color: $headingColor;
+        display: block;
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 1;
+        margin: 15px 0 5px;
+      }
+
+      &-title {
+        color: $paragraph;
+        font-size: 16px;
+        line-height: 1;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.counter-up-inner {
+  display: flex;
+  justify-content: space-between;
+}

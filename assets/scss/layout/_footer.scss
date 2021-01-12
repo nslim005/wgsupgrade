@@ -1,0 +1,153 @@
+/*=========================
+30. Footer Area Style Css
+===========================*/
+.footer-widget-area {
+  background-color: lighten($black, 20.5%);
+  padding: 50px 0;
+  position: relative;
+
+  &:before, &:after {
+    background-color: lighten($black, 20.5%);
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 750px;
+    @media #{$lg-device, $md-device, $sm-device} {
+      display: none;
+    }
+    
+    @media #{$xlmax-device} {
+      width: 600px;
+    }
+  }
+
+  &:after {
+    left: -19px;
+    bottom: 100%;
+    transform: skew(50deg, 0deg);
+  }
+
+  &:before {
+    left: -17px;
+    top: 100%;
+    transform: skew(-50deg, 0deg);
+  }
+}
+
+// Widget Item
+.widget {
+  &-item {
+    color: lighten($black, 80%);
+    margin-top: 30px;
+  }
+
+  &-title {
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    @media #{$sm-device} {
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: $white;
+      display: inline-block;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 0;
+      position: relative;
+
+      &:before {
+        background-color: rgba($black, 0.2);
+        content: '';
+        position: absolute;
+        left: calc(100% + 20px);
+        top: 15px;
+        height: 1px;
+        width: 500px;
+      }
+    }
+  }
+}
+
+.list {
+  li {
+    line-height: 1;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: lighten($black, 80%);
+      position: relative;
+
+      &:hover {
+        color: $white;
+      }
+
+      &:before {
+        content: '\f105';
+        font-family: $font-font_awesome;
+        font-size: 17px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &-6 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -20px;
+
+    li {
+      flex-basis: 50%;
+      max-width: 50%;
+      margin-bottom: 0;
+      margin-top: 20px;
+
+      @media #{$xs-device} {
+        flex-basis: 100%;
+        max-width: 100%;
+        line-height: 1.3;
+      }
+    }
+  }
+}
+
+.office-info {
+  p {
+    line-height: 1;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    i {
+      color: $brand-color;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+}
+
+// Footer Bottom area
+
+.footer-bottom-area {
+  background-color: lighten($black, 13.5%);
+  color: lighten($black, 80%);
+  padding: 40px 0;
+
+  @media #{$md-device, $sm-device} {
+    padding: 20px 0;
+  }
+}
+
+.copyright-text {
+  span {
+    color: red;
+  }
+}

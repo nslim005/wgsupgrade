@@ -1,0 +1,35 @@
+/*=============================
+6.1 - Leave a Message CSS
+==============================*/
+.leave-message-area-wrapper{
+  background: darken($white, 3.5%) url(../img/icons/sms.png) no-repeat right bottom;
+  border: 1px solid darken($white, 13.5%);
+  padding: 70px 30px 40px;
+
+  .section-title-wrap{
+    h2{
+      background-color: darken($white, 3.5%);
+    }
+  }
+}
+
+// Message Form Style
+.leave-message-form{
+  &__inner{
+    &__item{
+      margin-bottom: 10px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      input,textarea{
+        background-color: $white;
+        border: 1px solid darken($white, 13.5%);
+        display: block;
+        padding: 10px 15px;
+        width: 100%;
+      }
+    }
+  }
+}

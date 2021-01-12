@@ -1,0 +1,82 @@
+/*=======================
+Team Member Style CSS
+=========================*/
+.team-member {
+  overflow: hidden;
+  margin-top: 30px;
+
+  &__thumb {
+    position: relative;
+
+    img{
+      width: 100%;
+    }
+
+    &:before {
+      @include overlay($black, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.4s;
+    }
+
+    &:after {
+      background: rgba(255, 255, 255, .25);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      transition: all .6s cubic-bezier(.645, .045, .355, 1);
+      transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -100%, 0);
+      opacity: 0;
+    }
+  }
+
+  &__info {
+    position: relative;
+    z-index: 9;
+
+    h3 {
+      font-size: 17px;
+      line-height: 1;
+      font-weight: 600;
+      margin: 20px 0 10px;
+    }
+
+    .designation{
+      color: $brand-color;
+    }
+
+    .team-desc{
+      margin-top: 10px;
+    }
+
+    .social-icons{
+      margin-top: 20px;
+
+      a{
+        font-size: 18px ;
+        padding: 0;
+        margin-right: 15px;
+        &:after,&:before{
+          display: none;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .team-member__thumb {
+      &:before {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &:after {
+        transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 100%, 0);
+        opacity: 1;
+      }
+    }
+  }
+}

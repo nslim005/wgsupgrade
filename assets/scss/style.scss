@@ -1,0 +1,50 @@
+@import 'tableofcontent';
+
+// Base
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/typography';
+
+// Utilities
+@import 'utilities/color';
+@import 'utilities/common';
+
+// Layout Header
+@import "layout/header";
+@import "layout/footer";
+
+// Components
+@import "components/navbar";
+@import "components/offcanvas";
+@import "components/service";
+@import "components/leave-message";
+@import "components/project";
+@import "components/about";
+@import "components/testimonial";
+@import "components/news";
+@import "components/why-choose-us";
+@import "components/clients";
+@import "components/call-to-action";
+@import "components/team";
+@import "components/banner";
+@import "components/counter-up";
+@import "components/page-header";
+@import "pages/project-details";
+@import "components/sidebar";
+@import "components/product";
+
+
+// Pages
+@import "pages/service-details";
+@import "pages/project-details";
+@import "pages/blog-details";
+@import "pages/contact";
+@import "pages/shop";
+@import "pages/product-details";
+@import "pages/cart";
+@import "pages/checkout";
+
+
+
+@import "components/_social-icons.scss";
+@import "components/rev-slider";

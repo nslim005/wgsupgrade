@@ -1,0 +1,147 @@
+/*============================
+09. Testimonial Style CSS
+=============================*/
+.testimonial-area-wrapper {
+  padding: 82px 0 89px;
+
+  @media #{$sm-device} {
+    padding: 52px 0 60px;
+  }
+
+  .slick-slider{
+    .slick-dots{
+      li{
+        background-color: rgba($white, 0.8);
+
+        &:hover, &.slick-active{
+          background-color: $brand-color;
+        }
+      }
+    }
+  }
+}
+
+// Testimonial Item Style
+.testimonial-item {
+  &__quote {
+    background-color: $white;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &:before {
+      border-color: #fff transparent transparent transparent;
+      border-width: 18px 18px 0 0;
+      border-style: solid;
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 51px;
+      width: 0;
+      height: 0;
+      z-index: 2;
+    }
+  }
+
+  &__client {
+    display: flex;
+    align-items: center;
+
+    &__thumb {
+      border-radius: 50%;
+      margin-right: 15px;
+      overflow: hidden;
+      height: 70px;
+      width: 70px;
+    }
+
+    &__info {
+      h4 {
+        color: $white;
+        font-size: 18px;
+        margin-bottom: 0;
+
+        .client-title {
+          color: $brand-color;
+          display: block;
+          font-size: 15px;
+          line-height: 1;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  // Testimonial Style Two (2)
+  &--2 {
+    text-align: center;
+
+    .testimonial-item {
+      &__quote {
+        background-color: transparent;
+        color: $white;
+        padding: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &__client {
+        display: inherit;
+
+        &__thumb {
+          margin: 0 auto;
+        }
+
+        &__info {
+          position: relative;
+          padding-top: 20px;
+          margin-top: 20px;
+
+          &:before {
+            background-color: rgba($white, 0.5);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1px;
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  // Testimonial Style Three (3)
+
+  &--3 {
+    .testimonial-item {
+      &__quote {
+        border: 1px solid $border-color;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50px;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 20px 20px 0 0;
+          border-color: $border-color transparent transparent;
+          z-index: 1;
+        }
+      }
+
+      &__client{
+        &__info{
+          h4{
+            color: $headingColor;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+/*============================
+13. Call to Action Style CSS
+==============================*/
+.call-to-action-wrapper{
+  background-color: #573500;
+  padding: 40px 0;
+
+  @media #{$md-device, $sm-device} {
+    padding: 33px 0 40px;
+  }
+  
+  &.layout--2{
+    background-color: #343434;
+  }
+}
+
+.call-action-inner{
+  h2{
+    color: $white;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 0;
+
+    @media #{$xs-device} {
+      font-size: 20px;
+    }
+  }
+}

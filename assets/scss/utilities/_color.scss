@@ -1,0 +1,13 @@
+/*==========================
+02. Color CSS
+============================*/
+.primary-color{
+  color: $brand-color;
+}
+
+// Background Colors
+.bg{
+  &-brand{
+    background-color: $brand-color !important;
+  }
+}

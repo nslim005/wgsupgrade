@@ -1,0 +1,73 @@
+/*===============================
+19. Service Details Style CSS
+=================================*/
+.service-details-info {
+  margin-top: 40px;
+
+  h2 {
+    font-weight: 600;
+    margin-top: -10px;
+
+    @media #{$sm-device} {
+      font-size: 22px;
+    }
+  }
+}
+
+.service-feature {
+  margin-top: 29px;
+}
+
+// Service Details Sidebar
+.sidebar {
+  &-single {
+    background-color: $offWhite;
+    padding: 30px;
+    margin-top: 40px;
+
+    @media #{$md-device, $sm-device} {
+      margin-top: 30px;
+    }
+  }
+
+  &-heading {
+    font-size: 26px;
+    margin-top: -8px;
+    margin-bottom: 23px;
+  }
+}
+
+// Service List
+.service-list {
+  li {
+    border-bottom: 1px solid $border-color;
+    padding: 13px 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    a {
+      color: $paragraph;
+      font-weight: 600;
+      vertical-align: middle;
+
+      img, i {
+        margin-right: 15px;
+        vertical-align: middle;
+        font-size: 25px;
+        height: 25px;
+        width: 25px;
+      }
+
+      &:hover {
+        color: $headingColor;
+      }
+    }
+  }
+}

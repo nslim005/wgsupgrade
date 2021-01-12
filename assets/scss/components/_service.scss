@@ -1,0 +1,211 @@
+/*=======================
+06. Service Style CSS
+========================*/
+
+// Service Area Style
+.service-area-wrapper {
+  &--2 {
+    background-color: #4a443c;
+    padding: 82px 0 84px;
+
+    @media #{$sm-device} {
+      padding: 52px 0 55px;
+    }
+  }
+}
+
+// Services Page Grid
+.service-page-grid{
+  margin-top: -50px;
+
+  .service-item{
+    &--two{
+      margin-top: 50px;
+    }
+  }
+}
+
+// Service item style
+.service-item {
+  margin-top: 30px;
+
+  &__thumb {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    @media #{$sm-device} {
+      margin-bottom: 23px;
+    }
+
+    &:before {
+      @include overlay($blackSoft, 0.7);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: 0.4s;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .read-more {
+      background-color: rgba($black, 0.6);
+      color: $white;
+      display: inline-block;
+      padding: 3px 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scaleX(0);
+
+      &:hover {
+        color: $brand-color;
+      }
+    }
+
+    .btn-link-icon {
+      background-color: rgba($black, 0.6);
+      color: $white;
+      text-align: center;
+      display: block;
+      position: absolute;
+      left: -50px;
+      bottom: 0;
+      line-height: 45px;
+      height: 45px;
+      width: 45px;
+
+      &:hover {
+        background-color: $brand-color;
+      }
+    }
+  }
+
+  &__info {
+    h2 {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.2;
+      a {
+        color: $headingColor;
+      }
+    }
+  }
+
+  &:hover {
+    .service-item {
+      &__thumb {
+        &:before {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .read-more {
+          transform: translate(-50%, -50%) scaleX(1);
+        }
+
+        .btn-link-icon {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  // Service Style Two
+  &--two {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding-bottom: 25px;
+
+    @media #{$xxs-device} {
+      display: block;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .service-item__thumb {
+      max-width: 110px;
+      flex-basis: 110px;
+      margin-bottom: 0;
+      margin-right: 30px;
+
+      @media #{$xxs-device} {
+        margin: 0 auto 20px;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .service-item__info {
+      max-width: calc(100% - 110px);
+      flex-basis: calc(100% - 110px);
+
+      @media #{$xxs-device} {
+        text-align: center;
+        max-width: calc(100% - 0px);
+        flex-basis: calc(100% - 0px);
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  // Service Style Three
+  &--three {
+    .service-item {
+      &__icon {
+        color: $brand-color;
+        font-size: 40px;
+        line-height: 1;
+        margin-bottom: 15px;
+      }
+
+      &__info {
+        color: rgba($white, 0.6);
+
+        h2 {
+          font-size: 20px;
+          line-height: 1.2;
+          font-weight: 600;
+
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &.white-bg{
+      .service-item{
+        &__info{
+          color: $paragraph;
+          h2{
+            font-weight: 700;
+
+            a{
+              color: $headingColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

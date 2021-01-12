@@ -1,0 +1,395 @@
+/*================================
+25. Product Details Style CSS
+==================================*/
+
+.prod-details-info-content {
+  h2 {
+    font-weight: 600;
+    margin-top: -10px;
+    margin-bottom: 7px;
+
+    @media #{$md-device} {
+      font-size: 26px;
+    }
+
+    @media #{$sm-device} {
+      font-size: 22px;
+    }
+  }
+
+  .price-group {
+    color: $red;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+    @media #{$sm-device, $md-device} {
+      font-size: 20px;
+    }
+
+    del {
+      margin-right: 10px;
+      color: $paragraph;
+    }
+  }
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Product Config Content Style
+.config-item {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .config-name {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 13px;
+
+    b {
+      text-transform: capitalize;
+      margin-left: 5px;
+      font-size: 16px;
+      line-height: 1;
+      font-weight: 400;
+    }
+  }
+  .config-list {
+    li {
+      border: 1px solid #D4D4D4;
+      cursor: pointer;
+      color: #8d8d8d;
+      height: 40px;
+      padding: 3px;
+      font-size: 14px;
+      line-height: 1;
+      display: block;
+      text-align: center;
+      transition: 0.3s;
+      margin-right: 5px;
+      overflow: hidden;
+      outline: none;
+      width: 40px;
+
+      &.active, &:hover {
+        border-color: $brand-color;
+        color: $blackSoft;
+        font-weight: 600;
+      }
+
+      span {
+        line-height: 30px;
+        display: block;
+      }
+    }
+  }
+}
+
+// Product Details Footer
+.prod-details-footer {
+  &__item {
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+
+    &:first-child {
+      border-top: 1px solid $border-color;
+    }
+
+    h5 {
+      font-size: 15px;
+      line-height: 1;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 0;
+
+      @media #{$xs-device} {
+        font-size: 12px;
+      }
+
+      i {
+        color: #888888;
+        margin-right: 10px;
+
+        @media #{$xs-device} {
+          margin-right: 3px;
+        }
+      }
+    }
+
+    .cate-list {
+      li {
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          color: $blackSoft;
+          font-size: 15px;
+          font-weight: 600;
+
+          &:hover {
+            color: $brand-color;
+          }
+        }
+      }
+    }
+
+    .share-item {
+      a {
+        color: $blackSoft;
+        margin-right: 15px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          color: $brand-color
+        }
+      }
+    }
+  }
+}
+
+// Product Description Style
+.product-description-review {
+  #myTabContent {
+    border: 1px solid $border-color;
+    padding: 33px 30px;
+
+    @media #{$xxs-device} {
+      padding: 30px 15px;
+    }
+  }
+
+  .desc-review-tab-menu {
+    border-bottom: 0;
+    li {
+      a {
+        background-color: $offWhite;
+        color: $blackSoft;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 12px 45px;
+        text-transform: capitalize;
+
+        @media #{$xxs-device} {
+          font-size: 13px;
+          padding: 10px 20px;
+        }
+
+        &.active {
+          background-color: $brand-color;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+// Product Rating Style
+.product-rating-wrap {
+  .pro-avg-rating {
+    margin-bottom: 30px;
+    float: left;
+    width: 100%;
+    line-height: 1;
+
+    h4 {
+      font-size: 24px;
+      margin: 0 0 7px;
+      font-weight: 600;
+      span {
+        color: $black;
+        font-size: 12px;;
+      }
+    }
+    & > span {
+      display: block;
+    }
+  }
+
+  .rating-list {
+    margin-bottom: 30px;
+    float: left;
+    width: 100%;
+    .sin-list {
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+      i {
+        color: $yellow;
+      }
+      span {
+        color: #666666;
+      }
+    }
+  }
+
+  .sin-ratings {
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .rating-author {
+      float: left;
+      width: 100%;
+      margin-bottom: 10px;
+      h3 {
+        float: left;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+        line-height: 18px;
+        margin-right: 15px;
+      }
+      .rating-star {
+        line-height: 1;
+        i {
+          color: $yellow;
+          font-size: 14px;
+        }
+        span {
+          margin-left: 5px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  /*-- rating Form Wrap --*/
+  .rating-form-wrapper {
+    margin-top: 30px;
+    h3 {
+      font-size: 20px;
+      margin: 0 0 20px;
+      text-transform: capitalize;
+    }
+  }
+
+  /*-- rating Form --*/
+  .rating-form {
+    h5 {
+      float: left;
+      font-size: 16px;
+      line-height: 1;
+      margin-right: 10px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    .rating-star {
+      margin-bottom: 15px;
+      i {
+        color: #D4D4D4;
+        float: left;
+        display: block;
+        margin-right: 3px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          color: $yellow;
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: $blackSoft;
+    }
+    input {
+      width: 100%;
+      background-color: transparent;
+      border: 1px solid $border-color;
+      line-height: 24px;
+      padding: 8px 15px;
+      outline: none;
+      transition: 0.1s;
+
+      &:focus {
+        border-color: $brand-color;
+      }
+
+    }
+    textarea {
+      width: 100%;
+      background-color: transparent;
+      border: 1px solid $border-color;
+      line-height: 24px;
+      padding: 8px 15px;
+      height: 100px;
+      outline: none;
+      resize: none;
+      transition: 0.1s;
+      &:focus {
+        border-color: $brand-color;
+      }
+    }
+
+    .btn {
+      padding: 10px 40px;
+    }
+  }
+}
+
+// Product Quantity
+.pro-qty {
+  display: inline-block;
+  position: relative;
+  width: 140px;
+
+  input {
+    border: 1px solid $border-color;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    height: 45px;
+    width: 100%;
+  }
+
+  a {
+    color: $black;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    line-height: 45px;
+    height: 100%;
+    width: 30px;
+
+    &:hover {
+      background-color: $brand-color;
+      color: $white;
+    }
+
+    &.inc {
+      right: 0;
+      border-left: 1px solid $border-color;
+    }
+
+    &.dec {
+      border-right: 1px solid $border-color;
+      left: 0;
+    }
+  }
+}

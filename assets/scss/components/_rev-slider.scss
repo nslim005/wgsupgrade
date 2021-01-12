@@ -1,0 +1,859 @@
+/*==============================
+29. Start Revolution Slider CSS
+===============================*/
+.slider-area-wrapper{
+  overflow: hidden;
+}
+
+// Slider Arrow Style
+.hebe {
+  &.tparrows {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 1);
+    min-width: 70px;
+    min-height: 70px;
+    position: absolute;
+    display: block;
+    z-index: 100;
+
+    &:before {
+      font-family: "revicons";
+      font-size: 30px;
+      color: rgba(0, 0, 0, 0.5);
+      display: block;
+      line-height: 70px;
+      text-align: center;
+      transition: color 0.3s;
+      z-index: 2;
+      position: relative;
+      background: rgba(255, 255, 255, 1);
+      min-width: 70px;
+      min-height: 70px
+    }
+
+    .tp-title-wrap {
+      position: absolute;
+      z-index: 0;
+      display: inline-block;
+      background: #000;
+      background: rgba(0, 0, 0, 0.75);
+      min-height: 60px;
+      line-height: 60px;
+      top: -10px;
+      margin-left: 0;
+      transition: transform 0.3s;
+      transform: scalex(0);
+      transform-origin: 0 50%;
+    }
+
+    .tp-arr-titleholder {
+      position: relative;
+      text-transform: uppercase;
+      color: rgb(255, 255, 255);
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 90px;
+      white-space: nowrap;
+      padding: 0 20px 0 90px
+    }
+
+    .tp-arr-imgholder {
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      left: 100%;
+      display: block;
+      background-size: cover;
+      background-position: center center;
+      top: 0;
+      right: -90px
+    }
+
+    &.tp-leftarrow {
+      &:before {
+        content: "\e824"
+      }
+    }
+
+    &.tp-rightarrow {
+      &:before {
+        content: "\e825"
+      }
+
+      .tp-title-wrap {
+        right: 0;
+        transform-origin: 100% 50%
+      }
+
+      .tp-arr-titleholder {
+        margin-left: 0;
+        padding: 0 90px 0 20px
+      }
+
+      .tp-arr-imgholder {
+        right: auto;
+        left: -90px
+      }
+    }
+
+    &:hover {
+      &:before {
+        color: $black;
+      }
+
+      .tp-title-wrap {
+        transform: scaleX(1);
+      }
+
+      .tp-arr-titleholder {
+        transform: translatex(0px);
+        transition-delay: 0.1s;
+        opacity: 1
+      }
+    }
+  }
+}
+
+// Home 1 Slider CSS
+#slide-1-layer-2 {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+#slide-1-layer-3 {
+  color: rgba(255, 255, 255, 1);
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 70px;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  z-index: 6;
+}
+
+#slide-1-layer-4 {
+  color: rgba(255, 255, 255, 1);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  z-index: 7;
+}
+
+#slide-1-layer-8 {
+  background-color: rgba(250, 154, 0, 1);
+  border: 2px solid rgba(250, 154, 0, 1);
+  box-sizing: border-box;
+  box-shadow: none;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 16px;
+  outline: none;
+  white-space: nowrap;
+  z-index: 8;
+  transition: 0.4s;
+}
+
+#slide-2-layer-1 {
+  z-index: 9;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  color: rgba(250, 154, 0, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-2-layer-2 {
+  z-index: 10;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-2-layer-3 {
+  z-index: 12;
+  white-space: nowrap;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+#slide-2-layer-4 {
+  z-index: 13;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+}
+
+#slide-3-layer-1 {
+  z-index: 14;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  color: rgba(250, 154, 0, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-3-layer-2 {
+  z-index: 15;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-3-layer-3 {
+  z-index: 16;
+  min-width: 470px;
+  max-width: 470px;
+  white-space: normal;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.60);
+  cursor: pointer;
+}
+
+#slide-3-layer-6 {
+  z-index: 17;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(250, 154, 0, 1);
+  border: 2px solid rgba(250, 154, 0, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#slide-6-layer-4 {
+  white-space: nowrap !important;
+}
+
+.tp-bannertimer {
+  height: 5px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+// Home 2 Slider CSS
+#slide-6-layer-1 > span {
+  font-weight: 400;
+}
+
+#rev_slider_2_1 {
+  display: none;
+}
+
+#slide-4-layer-10 {
+  z-index: 5;
+  white-space: nowrap;
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-4-layer-16 {
+  z-index: 6;
+  white-space: nowrap;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
+
+#slide-4-layer-17 {
+  z-index: 7;
+  white-space: nowrap;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
+
+#slide-4-layer-18 {
+  z-index: 8;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+}
+
+#slide-5-layer-1 {
+  z-index: 9;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  color: rgba(250, 154, 0, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-5-layer-2 {
+  z-index: 10;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-5-layer-3 {
+  z-index: 12;
+  white-space: nowrap;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+#slide-5-layer-4 {
+  z-index: 13;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+}
+
+#slide-6-layer-1 {
+  z-index: 14;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  color: rgba(250, 154, 0, 1);
+  letter-spacing: -0.04em;
+  cursor: pointer;
+}
+
+#slide-6-layer-2 {
+  z-index: 15;
+  min-width: 570px;
+  max-width: 570px;
+  white-space: normal;
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: -0.04em;
+  cursor: pointer;
+}
+
+#slide-6-layer-4 {
+  z-index: 17;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(250, 154, 0, 1);
+  border: 2px solid rgba(250, 154, 0, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+}
+
+.tp-bannertimer {
+  height: 5px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+// Home 3 Slider Style
+#rev_slider_3_1_wrapper {
+  margin: 0 auto;
+  background: transparent;
+  padding: 0;
+}
+
+#rev_slider_3_1 {
+  display: none;
+}
+
+#slide-7-layer-10 {
+  z-index: 5;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 60px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-7-layer-17 {
+  z-index: 6;
+  white-space: nowrap;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
+
+#slide-7-layer-18 {
+  z-index: 7;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+}
+
+#slide-7-layer-20 {
+  z-index: 8;
+  white-space: nowrap;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+}
+
+#slide-7-layer-21 {
+  z-index: 9;
+}
+
+#slide-8-layer-10 {
+  z-index: 10;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-8-layer-22 {
+  z-index: 11;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 80px;
+  font-weight: 900;
+  color: rgba(51, 51, 51, 1);
+  background-color: rgba(250, 154, 0, 1);
+  letter-spacing: -0.04em;
+  cursor: pointer;
+}
+
+#slide-8-layer-18 {
+  z-index: 12;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+}
+
+#slide-8-layer-20 {
+  z-index: 13;
+  white-space: nowrap;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+#slide-8-layer-21 {
+  z-index: 14;
+}
+
+#slide-9-layer-10 {
+  z-index: 15;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-9-layer-22 {
+  z-index: 16;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  color: rgba(250, 154, 0, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-9-layer-18 {
+  z-index: 17;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+}
+
+.tp-bannertimer {
+  height: 5px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+// Home 4 Slider Style
+#rev_slider_4_1_wrapper {
+  margin: 0 auto;
+  background: transparent;
+  padding: 0;
+}
+
+#rev_slider_4_1 {
+  display: none;
+}
+
+#slide-10-layer-9 {
+  z-index: 5;
+}
+
+#slide-10-layer-3 {
+  z-index: 6;
+  white-space: nowrap;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 600;
+  color: rgba(17, 17, 17, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-10-layer-4 {
+  z-index: 7;
+  white-space: nowrap;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+}
+
+#slide-10-layer-8 {
+  z-index: 8;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(33, 33, 33, 1);
+  border: 2px solid rgba(68, 68, 68, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#slide-11-layer-1 {
+  z-index: 9;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 1);
+}
+
+#slide-11-layer-2 {
+  z-index: 10;
+  white-space: nowrap;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+#slide-11-layer-3 {
+  z-index: 11;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#slide-12-layer-9 {
+  z-index: 12;
+}
+
+#slide-12-layer-3 {
+  z-index: 13;
+  white-space: nowrap;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 600;
+  color: rgba(17, 17, 17, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-12-layer-4 {
+  z-index: 14;
+  white-space: nowrap;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+}
+
+#slide-12-layer-8 {
+  z-index: 15;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(33, 33, 33, 1);
+  border: 2px solid rgba(68, 68, 68, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#slide-10-layer-4 {
+  color: $white;
+}
+
+// Home 5 Slider CSS
+#rev_slider_5_1_wrapper {
+  margin: 0 auto;
+  background: transparent;
+  padding: 0;
+}
+
+#rev_slider_5_1 {
+  display: none;
+}
+
+#slide-13-layer-10 {
+  z-index: 5;
+  letter-spacing: 2px;
+}
+
+#slide-13-layer-11 {
+  z-index: 6;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-13-layer-12 {
+  z-index: 7;
+  min-width: 670px;
+  max-width: 670px;
+  white-space: normal;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+#slide-13-layer-14 {
+  z-index: 8;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#slide-13-layer-15 {
+  z-index: 9;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(250, 154, 0, 1);
+  border: 2px solid rgba(250, 154, 0, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#slide-14-layer-10 {
+  z-index: 10;
+}
+
+#slide-14-layer-11 {
+  z-index: 11;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-14-layer-12 {
+  z-index: 12;
+  min-width: 670px;
+  max-width: 670px;
+  white-space: normal;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+#slide-14-layer-14 {
+  z-index: 13;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#slide-14-layer-15 {
+  z-index: 14;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(250, 154, 0, 1);
+  border: 2px solid rgba(250, 154, 0, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#slide-15-layer-10 {
+  z-index: 15;
+}
+
+#slide-15-layer-11 {
+  z-index: 16;
+  white-space: nowrap;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: -0.04em;
+}
+
+#slide-15-layer-12 {
+  z-index: 17;
+  min-width: 670px;
+  max-width: 670px;
+  white-space: normal;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+#slide-15-layer-14 {
+  z-index: 18;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#slide-15-layer-15 {
+  z-index: 19;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(250, 154, 0, 1);
+  border: 2px solid rgba(250, 154, 0, 1);
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
